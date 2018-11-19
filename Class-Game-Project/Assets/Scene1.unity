@@ -1678,6 +1678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMove: 8.73
   speedRotate: 1
+  Bomb: {fileID: 1337753083202976, guid: b2b0cdf0fde3411498324123a72eff55, type: 2}
 --- !u!1 &1595134101 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 6d261572b8dfb574888f3be9287f022b,
