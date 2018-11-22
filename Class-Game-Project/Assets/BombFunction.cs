@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BombFunction : MonoBehaviour {
 
+    public GameObject explsn;
 	// Use this for initialization
 	void Start () {
 		
@@ -20,6 +21,7 @@ public class BombFunction : MonoBehaviour {
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
+            Instantiate(explsn, this.gameObject.transform.position, this.gameObject.transform.rotation);
         }
     }
 }
