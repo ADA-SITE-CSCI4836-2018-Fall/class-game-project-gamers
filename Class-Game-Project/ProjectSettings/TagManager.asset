@@ -6,6 +6,7 @@ TagManager:
   tags:
   - AntagonisticElement
   - Bomb
+  - Bullet
   layers:
   - Default
   - TransparentFX
