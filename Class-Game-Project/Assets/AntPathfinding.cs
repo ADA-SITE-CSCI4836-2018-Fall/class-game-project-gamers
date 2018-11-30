@@ -6,6 +6,8 @@ using UnityEngine.AI;
 public class AntPathfinding : MonoBehaviour {
 
     public GameObject characterRef;
+    
+   
     // Use this for initialization
 
     //Navmeshagent which belongs to object
@@ -13,6 +15,7 @@ public class AntPathfinding : MonoBehaviour {
 	void Start () {
         //take object
         agent = GetComponent<NavMeshAgent>();
+       
 	}
 	
 	// Update is called once per frame

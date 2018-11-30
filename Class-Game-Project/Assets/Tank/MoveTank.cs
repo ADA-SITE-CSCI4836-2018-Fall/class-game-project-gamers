@@ -12,14 +12,18 @@ public class MoveTank : MonoBehaviour
     public GameObject explsn;
     public float speedMove = 1.0F;
     public float speedRotate = 0.5F;
-    public int NumbarofBullet;
+    private int NumbarofBullet;
     public GameObject Bomb;
+    public GUIStyle styleofBulletLabel;
+    public GUIStyle styleofBombLabel;
+    private int numberofBombs;
 
     private void Start()
     {
         bulletSpeed = 15f;
     bulletDestroyTime = 8f;
         NumbarofBullet = 25;
+        numberofBombs = 5;
 }
     void Update()
     {
@@ -35,8 +39,12 @@ public class MoveTank : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
             {
-            var a = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
-         Instantiate(Bomb, a, Quaternion.identity);
+            numberofBombs--;
+            if (numberofBombs >= 0)
+            {
+                var a = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
+                Instantiate(Bomb, a, Quaternion.identity);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Keypad0))
@@ -56,6 +64,12 @@ public class MoveTank : MonoBehaviour
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * bulletSpeed;
 
         Destroy(bullet, bulletDestroyTime);
+    }
+
+    private void OnGUI()
+    {
+        GUI.Label(new Rect(0, 0, Screen.width, 50),"Bullets: " + NumbarofBullet, styleofBulletLabel);
+        GUI.Label(new Rect(0, 0, Screen.width, 50), "Bombs: " + numberofBombs, styleofBombLabel);
     }
 
 

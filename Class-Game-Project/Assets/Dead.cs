@@ -5,11 +5,14 @@ using UnityEngine;
 public class Dead : MonoBehaviour {
 
     public int healht;
-    public int deadenemy = 0;
-	// Use this for initialization
-	void Start () {
+    public int deadenemy;
+    public GUIStyle styleofEnemyLabel;
+    // Use this for initialization
+    void Start () {
         healht = 100;
-	}
+        deadenemy = 0;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -26,11 +29,15 @@ public class Dead : MonoBehaviour {
            
             if (healht <= 0)
             {
+                deadenemy = deadenemy + 1;
                 Destroy(gameObject);
-                deadenemy++;
+               
 
             }
             
         }
+
     }
+    
+
 }
