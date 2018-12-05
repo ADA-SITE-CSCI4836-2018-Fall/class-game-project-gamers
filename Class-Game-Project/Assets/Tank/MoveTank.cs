@@ -39,11 +39,12 @@ public class MoveTank : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
             {
-            numberofBombs--;
-            if (numberofBombs >= 0)
+            
+            if (numberofBombs > 0)
             {
                 var a = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
                 Instantiate(Bomb, a, Quaternion.identity);
+                numberofBombs--;
             }
         }
 
