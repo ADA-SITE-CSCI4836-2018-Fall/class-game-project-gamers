@@ -7,6 +7,10 @@ TagManager:
   - AntagonisticElement
   - Bomb
   - Bullet
+  - Interact
+  - Door
+  - MainCharacter
+  - Source
   layers:
   - Default
   - TransparentFX

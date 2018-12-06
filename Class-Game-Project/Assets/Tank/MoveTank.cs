@@ -17,12 +17,13 @@ public class MoveTank : MonoBehaviour
     public GUIStyle styleofBulletLabel;
     public GUIStyle styleofBombLabel;
     private int numberofBombs;
-
+    public GameObject[] AntagonisticElements;
+    public int numberofenemy;
     private void Start()
     {
         bulletSpeed = 15f;
     bulletDestroyTime = 8f;
-        NumbarofBullet = 25;
+        NumbarofBullet = 15;
         numberofBombs = 5;
 }
     void Update()
@@ -57,6 +58,12 @@ public class MoveTank : MonoBehaviour
                 NumbarofBullet--;
             }
         }
+
+        AntagonisticElements = GameObject.FindGameObjectsWithTag("AntagonisticElement");
+        numberofenemy = AntagonisticElements.Length;
+
+       
+
     }
     void Fire()
     {
@@ -73,5 +80,24 @@ public class MoveTank : MonoBehaviour
         GUI.Label(new Rect(0, 0, Screen.width, 50), "Bombs: " + numberofBombs, styleofBombLabel);
     }
 
+    void OnTriggerEnter(Collider other)
+    {
 
-}
+        if (other.CompareTag("Source"))
+        {
+
+
+            numberofBombs = 5;
+            NumbarofBullet = 15;
+
+
+
+        }
+    }
+    
+          
+    }
+
+
+
+
