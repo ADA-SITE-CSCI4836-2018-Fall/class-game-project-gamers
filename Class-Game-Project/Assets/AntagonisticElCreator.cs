@@ -29,7 +29,7 @@ using UnityEngine;
 
         if (CounterStatus <= 0)
         {
-            if (numberofEnemy < 3)
+            if (numberofEnemy < 2)
             {
                 Vector3 creationPoint = transform.position;
                 creationPoint.y = -0.5f;

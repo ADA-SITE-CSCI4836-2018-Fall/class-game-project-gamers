@@ -68,6 +68,7 @@ GameObject:
   - component: {fileID: 114246693488609552}
   - component: {fileID: 195892338986983140}
   - component: {fileID: 54939992331456574}
+  - component: {fileID: 114399307986670302}
   m_Layer: 0
   m_Name: EnemyTank
   m_TagString: Untagged
@@ -1306,6 +1307,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterRef: {fileID: 0}
+--- !u!114 &114399307986670302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1156699631802104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b7d4beccfd6ba6459937fb08a4d3565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 0
+  bulletDestroyTime: 0
+  bulletPrefab: {fileID: 0}
+  bulletSpawn: {fileID: 0}
+  explsn: {fileID: 0}
+  distance: 0
+  MainCharacter: {fileID: 0}
+  shoot: 0
 --- !u!137 &137899330989532794
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
