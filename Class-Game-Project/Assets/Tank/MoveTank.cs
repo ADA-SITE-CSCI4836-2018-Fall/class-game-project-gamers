@@ -93,7 +93,6 @@ public class MoveTank : MonoBehaviour
 
             numberofBombs = 5;
             NumbarofBullet = 15;
-<<<<<<< HEAD
             MainHealth = 100;
 
 
@@ -109,18 +108,13 @@ public class MoveTank : MonoBehaviour
                 Destroy(this.gameObject);
                 SceneManager.LoadScene("Menu");
             }
-=======
->>>>>>> d62e502f8deedd15ee1b411bbc4ddf2691aaa7f2
 
 
 
         }
     }
-<<<<<<< HEAD
 
 
-=======
->>>>>>> d62e502f8deedd15ee1b411bbc4ddf2691aaa7f2
     
           
     }

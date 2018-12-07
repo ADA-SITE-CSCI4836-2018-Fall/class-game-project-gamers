@@ -11,10 +11,7 @@ TagManager:
   - Door
   - MainCharacter
   - Source
-<<<<<<< HEAD
   - BulletEnemy
-=======
->>>>>>> d62e502f8deedd15ee1b411bbc4ddf2691aaa7f2
   layers:
   - Default
   - TransparentFX
